@@ -1,17 +1,15 @@
 function chunkString(str, chunkLength) {
-    // If the input string is null, return an empty array
-    if (!str) {
+    // Handle the edge case when the input string is null or empty
+    if (!str || chunkLength <= 0) {
         return [];
     }
 
-    const chunks = [];
-    // Iterate through the string, incrementing by chunkLength each time
+    let result = [];
     for (let i = 0; i < str.length; i += chunkLength) {
-        // Push each chunk into the chunks array
-        chunks.push(str.substring(i, i + chunkLength));
+        result.push(str.slice(i, i + chunkLength));
     }
 
-    return chunks;
+    return result;
 }
 
 // Do not change the code below
