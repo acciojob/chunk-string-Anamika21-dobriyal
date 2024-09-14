@@ -9,10 +9,10 @@ function chunkString(str, chunkLength) {
         result.push(str.slice(i, i + chunkLength));
     }
 
-    return result;
+    return result; 
 }
 
 // Do not change the code below
 const str = prompt("Enter String.");
 const size = prompt("Enter Chunk Size.");
-alert(chunkString(str, chunkLength));
+alert(chunkString(str, size));
